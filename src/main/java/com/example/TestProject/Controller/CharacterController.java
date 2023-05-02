@@ -2,6 +2,7 @@ package com.example.TestProject.Controller;
 
 import com.example.TestProject.Model.Characters;
 import com.example.TestProject.Repository.CharacterRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/characters")
 public class CharacterController {
+
+    @Autowired
     private final CharacterRepository characterRepository;
 
     CharacterController(final CharacterRepository characterRepository){
